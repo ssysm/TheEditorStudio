@@ -1,15 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {NotFoundComponent} from "./not-found/not-found.component";
+import { HomeComponent } from '../views/home/home.component';
+import { NotFoundComponent } from '../partical/not-found/not-found.component';
 
 const routes: Routes = [
   {
-    path:'404',
-    component:NotFoundComponent
+    path: '',
+    component: HomeComponent
   },
   {
-    path:'**',
-    redirectTo:'/404'
+    path: '404',
+    component: NotFoundComponent
+  },
+  {
+    path: '**',
+    redirectTo: '/404'
   }
 ];
 
